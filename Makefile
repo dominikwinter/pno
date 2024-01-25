@@ -1,12 +1,18 @@
-.PHONY: default b build i install r release
+.PHONY: default t test b build i install c clean r release
 
 default: build
+
+t test:
+	go test -v
 
 b build:
 	go build
 
 i install:
 	go install
+
+c clean:
+	go mod tidy
 
 r release:
 	mkdir -p bin
