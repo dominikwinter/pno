@@ -2,64 +2,53 @@
 
 A simple command-line interface (CLI) application written in Go that generates valid [Swedish "Personnummer" (personal identification numbers)](https://en.wikipedia.org/wiki/Personal_identity_number_(Sweden)).
 
+## Install
+
+* Download the binary from the [releases page](https://github.com/dominikwinter/pno/releases) or
+
+* Build the binary from source:
+  ```bash
+  go install github.com/dominikwinter/pno@latest
+  ```
 ## Usage
-
-a) Download the binary from the releases page or
-
-b) Build the binary from source:
-```bash
-go install github.com/dominikwinter/pno@latest
-```
-
-You can now run it with some options:
 ```bash
 pno gen -h
-```
-Which will list possible options:
-```
+
 Usage of pno gen:
   -c string
-    	Country code (default random)
+      Country code (default random)
   -d string
-    	Date (format: yyyymmdd) (default random)
+      Date (format: yyyymmdd) (default random)
   -f string
-    	Output forma (default 3):
-    		1. yymmddccgn
-    		2. yymmdd-ccgn
-    		3. yyyymmddccgn
-    		4. yyyymmdd-ccgn
+      Output forma (default 3):
+        1. yymmddccgn
+        2. yymmdd-ccgn
+        3. yyyymmddccgn
+        4. yyyymmdd-ccgn
   -g string
-    	Gender (m/f) (default random)
+      Gender (m/f) (default random)
   -h	Help
   -v	Verbose
 ```
 
 ## Development
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/dominikwinter/pno.git
-```
-
-2. Navigate to the project directory:
-
-```bash
-cd pno
-```
-
-3. Build and install the application:
-
-```bash
-make
-make install
-```
-
-4. Run the application:
-
-```bash
-pno
-```
+* Clone the repository:
+  ```bash
+  git clone https://github.com/dominikwinter/pno.git
+  ```
+* Navigate to the project directory:
+  ```bash
+  cd pno
+  ```
+* Build application:
+  ```bash
+  make
+  ```
+* Run the application:
+  ```bash
+  bin/pno
+  ```
 
 ## How to Contribute
 
