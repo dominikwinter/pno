@@ -1,3 +1,5 @@
+![pno logo](assets/logo.png)
+
 # Swedish Personnummer Generator
 
 A simple command-line interface (CLI) application written in Go that generates valid [Swedish "Personnummer" (personal identification numbers)](https://en.wikipedia.org/wiki/Personal_identity_number_(Sweden)).
