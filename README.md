@@ -8,16 +8,16 @@ a) Download the binary from the releases page or
 
 b) Build the binary from source:
 ```bash
-go install github.com/dominikwinter/genpno/cmd/genpno@latest
+go install github.com/dominikwinter/pno@latest
 ```
 
 You can now run it with some options:
 ```bash
-genpno -h
+pno gen -h
 ```
 Which will list possible options:
 ```
-Usage of genpno:
+Usage of pno gen:
   -c string
     	Country code (default random)
   -d string
@@ -39,13 +39,13 @@ Usage of genpno:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/dominikwinter/genpno.git
+git clone https://github.com/dominikwinter/pno.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd genpno
+cd pno
 ```
 
 3. Build and install the application:
@@ -58,7 +58,7 @@ make install
 4. Run the application:
 
 ```bash
-genpno
+pno
 ```
 
 ## How to Contribute

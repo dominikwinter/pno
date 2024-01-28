@@ -1,26 +1,31 @@
-.PHONY: default test build install clean release
-
+.PHONY: default
 default: build
 
+.PHONY: run
 run:
-	go run cmd/genpno/main.go
+	go run
 
+.PHONY: test
 test:
 	go test -v --race -cpu 2 -cover -shuffle on -vet '' ./...
 
+.PHONY: build
 build:
-	go build -o bin/genpno cmd/genpno/main.go
+	go build -trimpath -o ./bin/pno
 
+.PHONY: install
 install:
-	go install bin/genpno
+	install -b -S -v ./bin/pno ${GOPATH}/bin/.
 
+.PHONY: clean
 clean:
 	go mod tidy
 
+.PHONY: release
 release:
 	mkdir -p bin
-	CGO_ENABLED=0 GOOS=darwin GOARCH=arm64 go build -o bin/genpno-macos-arm64 cmd/genpno/main.go
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o bin/genpno-linux-amd64 cmd/genpno/main.go
-	CGO_ENABLED=0 GOOS=linux GOARCH=386 go build -o bin/genpno-linux-386 cmd/genpno/main.go
-	CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o bin/genpno-windows-amd64.exe cmd/genpno/main.go
-	CGO_ENABLED=0 GOOS=windows GOARCH=386 go build -o bin/genpno-windows-386.exe cmd/genpno/main.go
+	CGO_ENABLED=0 GOOS=darwin GOARCH=arm64 go build -o bin/pno-macos-arm64
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o bin/pno-linux-amd64
+	CGO_ENABLED=0 GOOS=linux GOARCH=386 go build -o bin/pno-linux-386
+	CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o bin/pno-windows-amd64.exe
+	CGO_ENABLED=0 GOOS=windows GOARCH=386 go build -o bin/pno-windows-386.exe
