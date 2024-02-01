@@ -7,7 +7,7 @@ import (
 	"github.com/dominikwinter/pno/internal/gen"
 )
 
-func Run(args []string) {
+func Gen(args []string) {
 	fs := flag.NewFlagSet("pno gen", flag.ExitOnError)
 
 	helpFlag := fs.Bool("h", false, "Help")

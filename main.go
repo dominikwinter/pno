@@ -8,10 +8,11 @@ import (
 )
 
 func main() {
-	const usage = `Usage of pno <command> [<args>]:
+	const usage = `Usage of pno <command> [<args>]
 
   commands:
     gen     Generate a personal number
+    val     Validate a personal number
 
   args:
     -h      Help`
@@ -26,7 +27,11 @@ func main() {
 
 	switch command {
 	case "gen":
-		cmd.Run(args)
+		cmd.Gen(args)
+
+	case "val":
+		cmd.Val(args)
+
 	default:
 		fmt.Fprintf(os.Stderr, "Unrecognized command %s.\n\n%s\n", command, usage)
 		os.Exit(1)

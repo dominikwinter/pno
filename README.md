@@ -2,7 +2,7 @@
 
 # Swedish Personnummer Generator
 
-A simple command-line interface (CLI) application written in Go that generates valid [Swedish "Personnummer" (personal identification numbers)](https://en.wikipedia.org/wiki/Personal_identity_number_(Sweden)).
+A simple command-line interface (CLI) application written in Go that generates or validates [Swedish "Personnummer" (personal identification numbers)](https://en.wikipedia.org/wiki/Personal_identity_number_(Sweden)).
 
 ## Install
 
@@ -13,24 +13,35 @@ A simple command-line interface (CLI) application written in Go that generates v
   go install github.com/dominikwinter/pno@latest
   ```
 ## Usage
+generate a personnummer:
 ```bash
 pno gen -h
 
 Usage of pno gen:
   -c string
-      Country code (default random)
+        Country code (default random)
   -d string
-      Date (format: yyyymmdd) (default random)
+        Date (format: yyyymmdd) (default random)
   -f string
-      Output forma (default 3):
-        1. yymmddccgn
-        2. yymmdd-ccgn
-        3. yyyymmddccgn
-        4. yyyymmdd-ccgn
+        Output forma (default 3):
+                1. yymmddccgn
+                2. yymmdd-ccgn
+                3. yyyymmddccgn
+                4. yyyymmdd-ccgn
   -g string
-      Gender (m/f) (default random)
-  -h	Help
-  -v	Verbose
+        Gender (m/f) (default random)
+  -h    Help
+  -v    Verbose
+```
+
+validate a personnummer:
+```bash
+pno val -h
+
+Usage of pno val <pno>:
+  -e    Return exit code 1 if not valid
+  -h    Help
+  -v    Verbose
 ```
 
 ## Development
