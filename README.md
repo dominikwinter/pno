@@ -14,7 +14,7 @@ A simple command-line interface (CLI) application written in Go that generates o
   ```
 ## Usage
 generate a personnummer:
-```bash
+```
 pno gen -h
 
 Usage of pno gen:
@@ -35,7 +35,7 @@ Usage of pno gen:
 ```
 
 validate a personnummer:
-```bash
+```
 pno val -h
 
 Usage of pno val <pno>:
