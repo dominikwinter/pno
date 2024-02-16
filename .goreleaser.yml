@@ -21,10 +21,16 @@ universal_binaries:
 brews:
   -
     name: pno
+    alternative_names:
+      - pno@{{ .Version }}
+      - pno@{{ .Major }}
+    url_template: https://github.com/dominikwinter/pno/releases/download/{{ .Tag }}/{{ .ArtifactName }}
     homepage: https://github.com/dominikwinter/pno
-    tap:
+    license: MIT
+    repository:
       owner: dominikwinter
       name: homebrew-tap
+      branch: master
 
 checksum:
   name_template: checksum.txt
