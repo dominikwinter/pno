@@ -6,14 +6,22 @@ A simple command-line interface (CLI) application written in Go that generates o
 
 ## Install
 
-* Download the binary from the [releases page](https://github.com/dominikwinter/pno/releases) or
+### Download
+Download the binary from the [releases page](https://github.com/dominikwinter/pno/releases)
 
-* Build the binary from source:
-  ```bash
-  go install github.com/dominikwinter/pno@latest
-  ```
+### Brew
+```bash
+brew tap dominikwinter/tap
+brew install dominikwinter/tap/pno
+```
+
+### Go
+```bash
+go install github.com/dominikwinter/pno@latest
+```
+
 ## Usage
-generate a personnummer:
+Generate a personnummer:
 ```
 pno gen -h
 
@@ -34,7 +42,7 @@ Usage of pno gen:
   -v    Verbose
 ```
 
-validate a personnummer:
+Validate a personnummer:
 ```
 pno val -h
 

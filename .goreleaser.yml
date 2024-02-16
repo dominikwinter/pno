@@ -21,10 +21,14 @@ universal_binaries:
 brews:
   -
     name: pno
+    url_template: https://github.com/dominikwinter/pno/releases/download/{{ .Tag }}/{{ .ArtifactName }}
     homepage: https://github.com/dominikwinter/pno
-    tap:
+    description: Generate and validate a Swedish Personnummer, an individualized identifier assigned to each individual born in Sweden
+    license: MIT
+    repository:
       owner: dominikwinter
       name: homebrew-tap
+      branch: master
 
 checksum:
   name_template: checksum.txt
